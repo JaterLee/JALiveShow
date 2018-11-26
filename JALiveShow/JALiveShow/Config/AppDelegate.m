@@ -18,9 +18,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window.rootViewController = [[JATabBarViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[[JATabBarViewController alloc] init]];
+    self.window = [[UIWindow alloc] init];
+    self.window.rootViewController = nav;
     self.window.backgroundColor = UIColor.whiteColor;
     [self.window makeKeyAndVisible];
+    
+    
+#if DEBUG
+    [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle"] load];
+#endif
     return YES;
 }
 
