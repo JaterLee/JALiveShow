@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		564917F62199682C00285BCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 564917F52199682C00285BCF /* AppDelegate.m */; };
-		564917F92199682C00285BCF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 564917F82199682C00285BCF /* ViewController.m */; };
-		564917FC2199682C00285BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564917FA2199682C00285BCF /* Main.storyboard */; };
-		564917FE2199683700285BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 564917FD2199683700285BCF /* Assets.xcassets */; };
-		564918012199683700285BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 564917FF2199683700285BCF /* LaunchScreen.storyboard */; };
-		564918042199683700285BCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 564918032199683700285BCF /* main.m */; };
 		5649180E2199683700285BCF /* JALiveShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649180D2199683700285BCF /* JALiveShowTests.m */; };
 		564918192199683700285BCF /* JALiveShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 564918182199683700285BCF /* JALiveShowUITests.m */; };
+		A9C1E75C219DCC7E000DADEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E74F219DCC7E000DADEC /* Assets.xcassets */; };
+		A9C1E75D219DCC7E000DADEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E753219DCC7E000DADEC /* LaunchScreen.storyboard */; };
+		A9C1E75E219DCC7E000DADEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E755219DCC7E000DADEC /* Main.storyboard */; };
+		A9C1E75F219DCC7E000DADEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E757219DCC7E000DADEC /* main.m */; };
+		A9C1E760219DCC7E000DADEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E758219DCC7E000DADEC /* AppDelegate.m */; };
+		A9C1E765219DD015000DADEC /* JATabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E764219DD015000DADEC /* JATabBarViewController.m */; };
+		A9C1E76821A45516000DADEC /* JADemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E76721A45516000DADEC /* JADemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +37,23 @@
 
 /* Begin PBXFileReference section */
 		564917F12199682C00285BCF /* JALiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JALiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		564917F42199682C00285BCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		564917F52199682C00285BCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		564917F72199682C00285BCF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		564917F82199682C00285BCF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		564917FB2199682C00285BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		564917FD2199683700285BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		564918002199683700285BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		564918022199683700285BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		564918032199683700285BCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		564918092199683700285BCF /* JALiveShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JALiveShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5649180D2199683700285BCF /* JALiveShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JALiveShowTests.m; sourceTree = "<group>"; };
 		5649180F2199683700285BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		564918142199683700285BCF /* JALiveShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JALiveShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		564918182199683700285BCF /* JALiveShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JALiveShowUITests.m; sourceTree = "<group>"; };
 		5649181A2199683700285BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9C1E74F219DCC7E000DADEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A9C1E752219DCC7E000DADEC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A9C1E754219DCC7E000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A9C1E756219DCC7E000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A9C1E757219DCC7E000DADEC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9C1E758219DCC7E000DADEC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A9C1E759219DCC7E000DADEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9C1E763219DD015000DADEC /* JATabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JATabBarViewController.h; sourceTree = "<group>"; };
+		A9C1E764219DD015000DADEC /* JATabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JATabBarViewController.m; sourceTree = "<group>"; };
+		A9C1E76621A45516000DADEC /* JADemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JADemo.h; sourceTree = "<group>"; };
+		A9C1E76721A45516000DADEC /* JADemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JADemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +104,13 @@
 		564917F32199682C00285BCF /* JALiveShow */ = {
 			isa = PBXGroup;
 			children = (
-				564917F42199682C00285BCF /* AppDelegate.h */,
-				564917F52199682C00285BCF /* AppDelegate.m */,
-				564917F72199682C00285BCF /* ViewController.h */,
-				564917F82199682C00285BCF /* ViewController.m */,
-				564917FA2199682C00285BCF /* Main.storyboard */,
-				564917FD2199683700285BCF /* Assets.xcassets */,
-				564917FF2199683700285BCF /* LaunchScreen.storyboard */,
-				564918022199683700285BCF /* Info.plist */,
-				564918032199683700285BCF /* main.m */,
+				A9C1E762219DCFBA000DADEC /* Tabbar */,
+				A9C1E751219DCC7E000DADEC /* Config */,
+				A9C1E75A219DCC7E000DADEC /* Export */,
+				A9C1E750219DCC7E000DADEC /* Follow */,
+				A9C1E75B219DCC7E000DADEC /* HomePage */,
+				A9C1E74D219DCC7E000DADEC /* Mine */,
+				A9C1E74E219DCC7E000DADEC /* Resource */,
 			);
 			path = JALiveShow;
 			sourceTree = "<group>";
@@ -130,6 +131,66 @@
 				5649181A2199683700285BCF /* Info.plist */,
 			);
 			path = JALiveShowUITests;
+			sourceTree = "<group>";
+		};
+		A9C1E74D219DCC7E000DADEC /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		A9C1E74E219DCC7E000DADEC /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A9C1E74F219DCC7E000DADEC /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A9C1E750219DCC7E000DADEC /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		A9C1E751219DCC7E000DADEC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				A9C1E752219DCC7E000DADEC /* AppDelegate.h */,
+				A9C1E753219DCC7E000DADEC /* LaunchScreen.storyboard */,
+				A9C1E755219DCC7E000DADEC /* Main.storyboard */,
+				A9C1E757219DCC7E000DADEC /* main.m */,
+				A9C1E758219DCC7E000DADEC /* AppDelegate.m */,
+				A9C1E759219DCC7E000DADEC /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		A9C1E75A219DCC7E000DADEC /* Export */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		A9C1E75B219DCC7E000DADEC /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		A9C1E762219DCFBA000DADEC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				A9C1E763219DD015000DADEC /* JATabBarViewController.h */,
+				A9C1E764219DD015000DADEC /* JATabBarViewController.m */,
+				A9C1E76621A45516000DADEC /* JADemo.h */,
+				A9C1E76721A45516000DADEC /* JADemo.m */,
+			);
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +296,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				564918012199683700285BCF /* LaunchScreen.storyboard in Resources */,
-				564917FE2199683700285BCF /* Assets.xcassets in Resources */,
-				564917FC2199682C00285BCF /* Main.storyboard in Resources */,
+				A9C1E75E219DCC7E000DADEC /* Main.storyboard in Resources */,
+				A9C1E75C219DCC7E000DADEC /* Assets.xcassets in Resources */,
+				A9C1E75D219DCC7E000DADEC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				564917F92199682C00285BCF /* ViewController.m in Sources */,
-				564918042199683700285BCF /* main.m in Sources */,
-				564917F62199682C00285BCF /* AppDelegate.m in Sources */,
+				A9C1E765219DD015000DADEC /* JATabBarViewController.m in Sources */,
+				A9C1E760219DCC7E000DADEC /* AppDelegate.m in Sources */,
+				A9C1E75F219DCC7E000DADEC /* main.m in Sources */,
+				A9C1E76821A45516000DADEC /* JADemo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,20 +362,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		564917FA2199682C00285BCF /* Main.storyboard */ = {
+		A9C1E753219DCC7E000DADEC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				564917FB2199682C00285BCF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		564917FF2199683700285BCF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				564918002199683700285BCF /* Base */,
+				A9C1E754219DCC7E000DADEC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A9C1E755219DCC7E000DADEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9C1E756219DCC7E000DADEC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -435,15 +497,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JALiveShow/Info.plist;
+				DEVELOPMENT_TEAM = ZEDQTGMZ2Q;
+				INFOPLIST_FILE = "$(SRCROOT)/JALiveShow/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxf.JALiveShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -451,15 +518,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JALiveShow/Info.plist;
+				DEVELOPMENT_TEAM = ZEDQTGMZ2Q;
+				INFOPLIST_FILE = "$(SRCROOT)/JALiveShow/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxf.JALiveShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

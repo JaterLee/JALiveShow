@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "JATabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window.rootViewController = [[JATabBarViewController alloc] init];
+    self.window.backgroundColor = UIColor.whiteColor;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
