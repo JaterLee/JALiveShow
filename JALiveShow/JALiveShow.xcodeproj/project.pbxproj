@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5649180E2199683700285BCF /* JALiveShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649180D2199683700285BCF /* JALiveShowTests.m */; };
 		564918192199683700285BCF /* JALiveShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 564918182199683700285BCF /* JALiveShowUITests.m */; };
+		9D85563475E40BB4D49B40FF /* libPods-JALiveShowUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802656B4FFBD70D36F920ABF /* libPods-JALiveShowUITests.a */; };
 		A92B463F21AC3F3B00FEF4BA /* JAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B463E21AC3F3B00FEF4BA /* JAHomeViewController.m */; };
 		A92B464221AC3F4A00FEF4BA /* JAFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464121AC3F4A00FEF4BA /* JAFollowViewController.m */; };
 		A92B464521AC3F5500FEF4BA /* JAExportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464421AC3F5500FEF4BA /* JAExportViewController.m */; };
@@ -19,6 +20,8 @@
 		A9C1E75F219DCC7E000DADEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E757219DCC7E000DADEC /* main.m */; };
 		A9C1E760219DCC7E000DADEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E758219DCC7E000DADEC /* AppDelegate.m */; };
 		A9C1E765219DD015000DADEC /* JATabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E764219DD015000DADEC /* JATabBarViewController.m */; };
+		C86ACCA57CCB69F2FAFAAF3B /* libPods-JALiveShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F536AF0A9B8F1A2E79D105 /* libPods-JALiveShow.a */; };
+		D3896248BE032C369719AC27 /* libPods-JALiveShowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F89A5F2510E556DA5AA0332 /* libPods-JALiveShowTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01F536AF0A9B8F1A2E79D105 /* libPods-JALiveShow.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JALiveShow.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F89A5F2510E556DA5AA0332 /* libPods-JALiveShowTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JALiveShowTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		111DB61F5466044D389F6FB7 /* Pods-JALiveShowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShowUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShowUITests/Pods-JALiveShowUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		336BFCA1A824B32046DAF848 /* Pods-JALiveShowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShowUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShowUITests/Pods-JALiveShowUITests.release.xcconfig"; sourceTree = "<group>"; };
 		564917F12199682C00285BCF /* JALiveShow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JALiveShow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		564918092199683700285BCF /* JALiveShowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JALiveShowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5649180D2199683700285BCF /* JALiveShowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JALiveShowTests.m; sourceTree = "<group>"; };
@@ -46,6 +53,8 @@
 		564918142199683700285BCF /* JALiveShowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JALiveShowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		564918182199683700285BCF /* JALiveShowUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JALiveShowUITests.m; sourceTree = "<group>"; };
 		5649181A2199683700285BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D41ED1864EFF5ECF8922E4E /* Pods-JALiveShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShow/Pods-JALiveShow.debug.xcconfig"; sourceTree = "<group>"; };
+		802656B4FFBD70D36F920ABF /* libPods-JALiveShowUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JALiveShowUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A92B463D21AC3F3B00FEF4BA /* JAHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomeViewController.h; sourceTree = "<group>"; };
 		A92B463E21AC3F3B00FEF4BA /* JAHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomeViewController.m; sourceTree = "<group>"; };
 		A92B464021AC3F4A00FEF4BA /* JAFollowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAFollowViewController.h; sourceTree = "<group>"; };
@@ -64,6 +73,9 @@
 		A9C1E759219DCC7E000DADEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9C1E763219DD015000DADEC /* JATabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JATabBarViewController.h; sourceTree = "<group>"; };
 		A9C1E764219DD015000DADEC /* JATabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JATabBarViewController.m; sourceTree = "<group>"; };
+		AA53220B0FD2A3B684990471 /* Pods-JALiveShowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShowTests/Pods-JALiveShowTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C955AEC67F5E0C140BBEDB51 /* Pods-JALiveShowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShowTests/Pods-JALiveShowTests.release.xcconfig"; sourceTree = "<group>"; };
+		FBC984A6D8DB7677BB48936D /* Pods-JALiveShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShow/Pods-JALiveShow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C86ACCA57CCB69F2FAFAAF3B /* libPods-JALiveShow.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3896248BE032C369719AC27 /* libPods-JALiveShowTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +99,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D85563475E40BB4D49B40FF /* libPods-JALiveShowUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1747DD6E2D524505AD96D59D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01F536AF0A9B8F1A2E79D105 /* libPods-JALiveShow.a */,
+				0F89A5F2510E556DA5AA0332 /* libPods-JALiveShowTests.a */,
+				802656B4FFBD70D36F920ABF /* libPods-JALiveShowUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		564917E82199682C00285BCF = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +123,8 @@
 				5649180C2199683700285BCF /* JALiveShowTests */,
 				564918172199683700285BCF /* JALiveShowUITests */,
 				564917F22199682C00285BCF /* Products */,
+				97754E5EFB93D909D8DC505C /* Pods */,
+				1747DD6E2D524505AD96D59D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +169,19 @@
 				5649181A2199683700285BCF /* Info.plist */,
 			);
 			path = JALiveShowUITests;
+			sourceTree = "<group>";
+		};
+		97754E5EFB93D909D8DC505C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D41ED1864EFF5ECF8922E4E /* Pods-JALiveShow.debug.xcconfig */,
+				FBC984A6D8DB7677BB48936D /* Pods-JALiveShow.release.xcconfig */,
+				AA53220B0FD2A3B684990471 /* Pods-JALiveShowTests.debug.xcconfig */,
+				C955AEC67F5E0C140BBEDB51 /* Pods-JALiveShowTests.release.xcconfig */,
+				111DB61F5466044D389F6FB7 /* Pods-JALiveShowUITests.debug.xcconfig */,
+				336BFCA1A824B32046DAF848 /* Pods-JALiveShowUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A92B464921AC4DF000FEF4BA /* Tools */ = {
@@ -225,9 +265,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5649181D2199683700285BCF /* Build configuration list for PBXNativeTarget "JALiveShow" */;
 			buildPhases = (
+				44EC05E5318A53D12D13C2A8 /* [CP] Check Pods Manifest.lock */,
 				564917ED2199682C00285BCF /* Sources */,
 				564917EE2199682C00285BCF /* Frameworks */,
 				564917EF2199682C00285BCF /* Resources */,
+				E324BB9E0DABDA92D66C819F /* [CP] Embed Pods Frameworks */,
+				224079AD2E69162A80C95AF9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,9 +285,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 564918202199683700285BCF /* Build configuration list for PBXNativeTarget "JALiveShowTests" */;
 			buildPhases = (
+				D660B2AC1D365273A3E02B92 /* [CP] Check Pods Manifest.lock */,
 				564918052199683700285BCF /* Sources */,
 				564918062199683700285BCF /* Frameworks */,
 				564918072199683700285BCF /* Resources */,
+				278CBFF84C53CCF9A07DDB21 /* [CP] Embed Pods Frameworks */,
+				A62166390EC2C7B0162840DD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,9 +306,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 564918232199683700285BCF /* Build configuration list for PBXNativeTarget "JALiveShowUITests" */;
 			buildPhases = (
+				19C3CD12A7E2F6B4E4547F99 /* [CP] Check Pods Manifest.lock */,
 				564918102199683700285BCF /* Sources */,
 				564918112199683700285BCF /* Frameworks */,
 				564918122199683700285BCF /* Resources */,
+				FFE08ADE644A928EAAB424E4 /* [CP] Embed Pods Frameworks */,
+				8508D627917A0F0FE3B5DC46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,6 +390,153 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19C3CD12A7E2F6B4E4547F99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JALiveShowUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		224079AD2E69162A80C95AF9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JALiveShow/Pods-JALiveShow-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		278CBFF84C53CCF9A07DDB21 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JALiveShowTests/Pods-JALiveShowTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44EC05E5318A53D12D13C2A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JALiveShow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8508D627917A0F0FE3B5DC46 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JALiveShowUITests/Pods-JALiveShowUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A62166390EC2C7B0162840DD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JALiveShowTests/Pods-JALiveShowTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D660B2AC1D365273A3E02B92 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JALiveShowTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E324BB9E0DABDA92D66C819F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JALiveShow/Pods-JALiveShow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFE08ADE644A928EAAB424E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JALiveShowUITests/Pods-JALiveShowUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		564917ED2199682C00285BCF /* Sources */ = {
@@ -515,6 +711,7 @@
 		};
 		5649181E2199683700285BCF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D41ED1864EFF5ECF8922E4E /* Pods-JALiveShow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -536,6 +733,7 @@
 		};
 		5649181F2199683700285BCF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBC984A6D8DB7677BB48936D /* Pods-JALiveShow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -557,6 +755,7 @@
 		};
 		564918212199683700285BCF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA53220B0FD2A3B684990471 /* Pods-JALiveShowTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -575,6 +774,7 @@
 		};
 		564918222199683700285BCF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C955AEC67F5E0C140BBEDB51 /* Pods-JALiveShowTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -593,6 +793,7 @@
 		};
 		564918242199683700285BCF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 111DB61F5466044D389F6FB7 /* Pods-JALiveShowUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JALiveShowUITests/Info.plist;
@@ -610,6 +811,7 @@
 		};
 		564918252199683700285BCF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 336BFCA1A824B32046DAF848 /* Pods-JALiveShowUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JALiveShowUITests/Info.plist;
