@@ -15,15 +15,18 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
+  - ReactiveObjC (3.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
+  - ReactiveObjC
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
 
-PODFILE CHECKSUM: a6d6c2c46f02796f50f5c4607542f04c179340f4
+PODFILE CHECKSUM: 5484f59ca594f97966c4178915d0e13409b39647
 
 COCOAPODS: 1.4.0

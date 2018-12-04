@@ -6,7 +6,7 @@ target 'JALiveShow' do
   # use_frameworks!
 pod 'Masonry'
 pod 'AFNetworking'
-pod 'ReactiveCocoa'
+pod 'ReactiveObjC'
   # Pods for JALiveShow
 
   target 'JALiveShowTests' do
