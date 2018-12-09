@@ -45,7 +45,7 @@
              selectedImageName:(NSString *)selectedImageName {
     childVC.tabBarItem.title = title;
     childVC.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    childVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, 0, 0);
+    childVC.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
     childVC.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [childVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [JAThemeManager colorWithHexString:@"535353"]} forState:UIControlStateNormal];
     [childVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [JAThemeManager colorWithHexString:@"eb5b60"]} forState:UIControlStateSelected];

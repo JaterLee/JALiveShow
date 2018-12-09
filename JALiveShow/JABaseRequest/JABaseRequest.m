@@ -13,10 +13,26 @@
 @implementation JABaseRequest
 
 - (void)start {
-    [JANetworkAgent sharedAgent] 
+    [[JANetworkAgent sharedAgent] addRequest:self];
+}
+
+- (JARequestMethod)requestMethod {
+    return JARequestMethodGet;
 }
 
 
+- (NSString *)baseUrl {
+    return @"";
+}
+
+- (NSString *)requestUrl {
+    return @"";
+}
+
+
+- (id)requestArgument {
+    return nil;
+}
 
 - (void)getHotRecAnchorRequest {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

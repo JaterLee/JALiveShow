@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+@class JABaseRequest;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JANetworkAgent : NSObject
 
 + (JANetworkAgent *)sharedAgent;
+
+- (void)addRequest:(JABaseRequest *)request;
 
 @end
 

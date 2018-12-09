@@ -10,9 +10,27 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, JARequestMethod) {
+    JARequestMethodGet = 0,
+    JARequestMethodPost
+};
+
 @interface JABaseRequest : NSObject
 
-- (void)getHotRecAnchorRequest;
+/// 开始请求
+- (void)start;
+
+/// http 请求的类型
+- (JARequestMethod)requestMethod;
+
+/// 域名
+- (NSString *)baseUrl;
+
+/// 请求地址后缀
+- (NSString *)requestUrl;
+
+/// 参数
+- (id)requestArgument;
 
 @end
 

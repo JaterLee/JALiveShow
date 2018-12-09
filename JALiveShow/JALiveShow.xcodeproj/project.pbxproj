@@ -17,6 +17,9 @@
 		A92B464C21AC4E1700FEF4BA /* JAThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464B21AC4E1700FEF4BA /* JAThemeManager.m */; };
 		A92B464F21B6C81D00FEF4BA /* JABaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464E21B6C81D00FEF4BA /* JABaseRequest.m */; };
 		A92B465321B6DA5600FEF4BA /* JANetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B465221B6DA5600FEF4BA /* JANetworkAgent.m */; };
+		A9BD3B1221BD626000CDC053 /* JAMBaseReuqest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1121BD626000CDC053 /* JAMBaseReuqest.m */; };
+		A9BD3B1521BD627600CDC053 /* JANetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1421BD627600CDC053 /* JANetUtil.m */; };
+		A9BD3B1921BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1821BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m */; };
 		A9C1E75C219DCC7E000DADEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E74F219DCC7E000DADEC /* Assets.xcassets */; };
 		A9C1E75D219DCC7E000DADEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E753219DCC7E000DADEC /* LaunchScreen.storyboard */; };
 		A9C1E75F219DCC7E000DADEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E757219DCC7E000DADEC /* main.m */; };
@@ -71,6 +74,12 @@
 		A92B464E21B6C81D00FEF4BA /* JABaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JABaseRequest.m; sourceTree = "<group>"; };
 		A92B465121B6DA5600FEF4BA /* JANetworkAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JANetworkAgent.h; sourceTree = "<group>"; };
 		A92B465221B6DA5600FEF4BA /* JANetworkAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JANetworkAgent.m; sourceTree = "<group>"; };
+		A9BD3B1021BD626000CDC053 /* JAMBaseReuqest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAMBaseReuqest.h; sourceTree = "<group>"; };
+		A9BD3B1121BD626000CDC053 /* JAMBaseReuqest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAMBaseReuqest.m; sourceTree = "<group>"; };
+		A9BD3B1321BD627600CDC053 /* JANetUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JANetUtil.h; sourceTree = "<group>"; };
+		A9BD3B1421BD627600CDC053 /* JANetUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JANetUtil.m; sourceTree = "<group>"; };
+		A9BD3B1721BD62F700CDC053 /* JAGetHotRecAnchorReuqest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAGetHotRecAnchorReuqest.h; sourceTree = "<group>"; };
+		A9BD3B1821BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAGetHotRecAnchorReuqest.m; sourceTree = "<group>"; };
 		A9C1E74F219DCC7E000DADEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9C1E752219DCC7E000DADEC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9C1E754219DCC7E000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -148,6 +157,7 @@
 		564917F32199682C00285BCF /* JALiveShow */ = {
 			isa = PBXGroup;
 			children = (
+				A9BD3B0F21BD623E00CDC053 /* Request */,
 				A9C1E762219DCFBA000DADEC /* Tabbar */,
 				A9C1E75B219DCC7E000DADEC /* HomePage */,
 				A9C1E750219DCC7E000DADEC /* Follow */,
@@ -211,6 +221,26 @@
 			path = JABaseRequest;
 			sourceTree = "<group>";
 		};
+		A9BD3B0F21BD623E00CDC053 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				A9BD3B1021BD626000CDC053 /* JAMBaseReuqest.h */,
+				A9BD3B1121BD626000CDC053 /* JAMBaseReuqest.m */,
+				A9BD3B1321BD627600CDC053 /* JANetUtil.h */,
+				A9BD3B1421BD627600CDC053 /* JANetUtil.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		A9BD3B1621BD62D100CDC053 /* Reuqest */ = {
+			isa = PBXGroup;
+			children = (
+				A9BD3B1721BD62F700CDC053 /* JAGetHotRecAnchorReuqest.h */,
+				A9BD3B1821BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m */,
+			);
+			name = Reuqest;
+			sourceTree = "<group>";
+		};
 		A9C1E74D219DCC7E000DADEC /* Mine */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +291,7 @@
 		A9C1E75B219DCC7E000DADEC /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				A9BD3B1621BD62D100CDC053 /* Reuqest */,
 				A92B463D21AC3F3B00FEF4BA /* JAHomeViewController.h */,
 				A92B463E21AC3F3B00FEF4BA /* JAHomeViewController.m */,
 			);
@@ -565,8 +596,11 @@
 				A92B465321B6DA5600FEF4BA /* JANetworkAgent.m in Sources */,
 				A92B463F21AC3F3B00FEF4BA /* JAHomeViewController.m in Sources */,
 				A92B464221AC3F4A00FEF4BA /* JAFollowViewController.m in Sources */,
+				A9BD3B1921BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m in Sources */,
 				A9C1E765219DD015000DADEC /* JATabBarViewController.m in Sources */,
 				A9C1E760219DCC7E000DADEC /* AppDelegate.m in Sources */,
+				A9BD3B1521BD627600CDC053 /* JANetUtil.m in Sources */,
+				A9BD3B1221BD626000CDC053 /* JAMBaseReuqest.m in Sources */,
 				A92B464C21AC4E1700FEF4BA /* JAThemeManager.m in Sources */,
 				A9C1E75F219DCC7E000DADEC /* main.m in Sources */,
 				A92B464521AC3F5500FEF4BA /* JAExportViewController.m in Sources */,
@@ -668,7 +702,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -721,7 +755,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

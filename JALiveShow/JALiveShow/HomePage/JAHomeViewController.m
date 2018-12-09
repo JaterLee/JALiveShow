@@ -7,7 +7,7 @@
 //
 
 #import "JAHomeViewController.h"
-#import "JABaseRequest.h"
+#import "JAGetHotRecAnchorReuqest.h"
 
 @interface JAHomeViewController ()
 
@@ -19,8 +19,8 @@
     [super viewDidLoad];
     self.navigationItem.title = @"喵live";
     
-    JABaseRequest *request = [JABaseRequest new];
-    [request getHotRecAnchorRequest];
+    JAGetHotRecAnchorReuqest *request = [JAGetHotRecAnchorReuqest new];
+    [request start];
 }
 
 /*
