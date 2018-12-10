@@ -17,6 +17,11 @@ typedef NS_ENUM(NSInteger, JARequestMethod) {
 
 @interface JABaseRequest : NSObject
 
+@property (nonatomic, strong, readonly) NSURLSessionTask *requestTask;
+@property (nonatomic, strong, readonly, nullable) id responseObject;
+@property (nonatomic, strong, readonly, nullable) id responseJSONObject;
+@property (nonatomic, strong, readonly, nullable) NSString *responseString;
+
 /// 开始请求
 - (void)start;
 

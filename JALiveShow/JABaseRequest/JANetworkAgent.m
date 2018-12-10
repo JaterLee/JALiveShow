@@ -9,10 +9,17 @@
 #import "JANetworkAgent.h"
 #import "JABaseRequest.h"
 #import <AFNetworking/AFNetworking.h>
+#import <pthread/pthread.h>
+#import "JABaseRequestPrivate.h"
+
+#define Lock() pthread_mutex_lock(&_lock)
+#define Unlock() pthread_mutex_unlock(&_lock)
 
 @implementation JANetworkAgent {
     AFHTTPSessionManager * _manager;
     AFJSONResponseSerializer *_jsonResponseSerializer;
+    NSMutableDictionary<NSNumber *, JABaseRequest *> *_requestsRecord;
+    pthread_mutex_t _lock;
 }
 
 + (JANetworkAgent *)sharedAgent {
@@ -30,6 +37,10 @@
         _manager.securityPolicy = [AFSecurityPolicy defaultPolicy];
         _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
         [self jsonResponseSerializer];
+        
+        _requestsRecord = [NSMutableDictionary dictionary];
+        
+        pthread_mutex_init(&_lock, NULL);
     }
     return self;
 }
@@ -39,11 +50,12 @@
 - (void)addRequest:(JABaseRequest *)request {
     NSParameterAssert(request);
     NSError *__autoreleasing error = nil;
-    NSURLSessionTask *task = [self sessionTaskForRequest:request error:&error];
+    request.requestTask = [self sessionTaskForRequest:request error:&error];
     if (error) {
         NSLog(@"error = %@", error);
     }
-    [task resume];
+    [self addRequestToRecord:request];
+    [request.requestTask resume];
 }
 
 - (NSURLSessionTask *)sessionTaskForRequest:(JABaseRequest *)request error:(NSError * _Nullable __autoreleasing *)error {
@@ -73,9 +85,39 @@
                               uploadProgress:nil
                             downloadProgress:nil
                            completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-                               NSLog(@"response %@\nresponseObject %@\nerror %@",response, responseObject, error);
+                               [self handleRequestResult:dataTask urlResponse:response responseObject:responseObject error:error];
     }];
     return dataTask;
+}
+
+- (void)handleRequestResult:(NSURLSessionTask *)task urlResponse:(NSURLResponse *)response responseObject:(id)responseObject error:(NSError *)error {
+    Lock();
+    JABaseRequest *request = _requestsRecord[@(task.taskIdentifier)];
+    Unlock();
+    
+    if (!request) {
+        return;
+    }
+    
+    NSLog(@"Finished Request: %@", NSStringFromClass(request.class));
+    
+    request.responseObject = responseObject;
+    if ([request.responseObject isKindOfClass:[NSData class]]) {
+        request.responseString = [[NSString alloc] initWithData:request.responseObject encoding:NSUTF8StringEncoding];
+    }
+    request.responseJSONObject = [_jsonResponseSerializer responseObjectForResponse:response data:responseObject error:&error];
+}
+
+- (void)addRequestToRecord:(JABaseRequest *)request {
+    Lock();
+    _requestsRecord[@(request.requestTask.taskIdentifier)] = request;
+    Unlock();
+}
+
+- (void)removeRequestAtRecord:(JABaseRequest *)request {
+    Lock();
+    [_requestsRecord removeObjectForKey:@(request.requestTask.taskIdentifier)];
+    Unlock();
 }
 
 #pragma mark - Setter and Getter

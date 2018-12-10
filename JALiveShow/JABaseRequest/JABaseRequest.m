@@ -10,6 +10,15 @@
 #import <AFNetworking/AFNetworking.h>
 #import "JANetworkAgent.h"
 
+@interface JABaseRequest ()
+
+@property (nonatomic, strong, readwrite) NSURLSessionTask *requestTask;
+@property (nonatomic, strong, readwrite) id responseObject;
+@property (nonatomic, strong, readwrite) id responseJSONObject;
+@property (nonatomic, strong, readwrite) NSString *responseString;
+
+@end
+
 @implementation JABaseRequest
 
 - (void)start {

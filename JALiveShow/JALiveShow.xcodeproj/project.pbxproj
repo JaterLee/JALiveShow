@@ -20,6 +20,7 @@
 		A9BD3B1221BD626000CDC053 /* JAMBaseReuqest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1121BD626000CDC053 /* JAMBaseReuqest.m */; };
 		A9BD3B1521BD627600CDC053 /* JANetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1421BD627600CDC053 /* JANetUtil.m */; };
 		A9BD3B1921BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1821BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m */; };
+		A9BD3B1F21BEC5E000CDC053 /* JABaseRequestPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1E21BEC5E000CDC053 /* JABaseRequestPrivate.m */; };
 		A9C1E75C219DCC7E000DADEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E74F219DCC7E000DADEC /* Assets.xcassets */; };
 		A9C1E75D219DCC7E000DADEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E753219DCC7E000DADEC /* LaunchScreen.storyboard */; };
 		A9C1E75F219DCC7E000DADEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E757219DCC7E000DADEC /* main.m */; };
@@ -80,6 +81,8 @@
 		A9BD3B1421BD627600CDC053 /* JANetUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JANetUtil.m; sourceTree = "<group>"; };
 		A9BD3B1721BD62F700CDC053 /* JAGetHotRecAnchorReuqest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAGetHotRecAnchorReuqest.h; sourceTree = "<group>"; };
 		A9BD3B1821BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAGetHotRecAnchorReuqest.m; sourceTree = "<group>"; };
+		A9BD3B1D21BEC5E000CDC053 /* JABaseRequestPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JABaseRequestPrivate.h; sourceTree = "<group>"; };
+		A9BD3B1E21BEC5E000CDC053 /* JABaseRequestPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JABaseRequestPrivate.m; sourceTree = "<group>"; };
 		A9C1E74F219DCC7E000DADEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9C1E752219DCC7E000DADEC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9C1E754219DCC7E000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				A92B464E21B6C81D00FEF4BA /* JABaseRequest.m */,
 				A92B465121B6DA5600FEF4BA /* JANetworkAgent.h */,
 				A92B465221B6DA5600FEF4BA /* JANetworkAgent.m */,
+				A9BD3B1D21BEC5E000CDC053 /* JABaseRequestPrivate.h */,
+				A9BD3B1E21BEC5E000CDC053 /* JABaseRequestPrivate.m */,
 			);
 			path = JABaseRequest;
 			sourceTree = "<group>";
@@ -597,6 +602,7 @@
 				A92B463F21AC3F3B00FEF4BA /* JAHomeViewController.m in Sources */,
 				A92B464221AC3F4A00FEF4BA /* JAFollowViewController.m in Sources */,
 				A9BD3B1921BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m in Sources */,
+				A9BD3B1F21BEC5E000CDC053 /* JABaseRequestPrivate.m in Sources */,
 				A9C1E765219DD015000DADEC /* JATabBarViewController.m in Sources */,
 				A9C1E760219DCC7E000DADEC /* AppDelegate.m in Sources */,
 				A9BD3B1521BD627600CDC053 /* JANetUtil.m in Sources */,
