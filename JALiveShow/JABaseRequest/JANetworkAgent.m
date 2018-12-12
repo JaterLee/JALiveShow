@@ -58,6 +58,13 @@
     [request.requestTask resume];
 }
 
+- (void)cancelRequest:(JABaseRequest *)request {
+    NSParameterAssert(request);
+    [request.requestTask cancel];
+    [self removeRequestAtRecord:request];
+    [request clearCompletionBlock];
+}
+
 - (NSURLSessionTask *)sessionTaskForRequest:(JABaseRequest *)request error:(NSError * _Nullable __autoreleasing *)error {
     JARequestMethod requestMethod = [request requestMethod];
     NSString *url = [self buildRequestUrl:request];
@@ -101,11 +108,51 @@
     
     NSLog(@"Finished Request: %@", NSStringFromClass(request.class));
     
+    NSError *__autoreleasing serializerError = nil;
     request.responseObject = responseObject;
     if ([request.responseObject isKindOfClass:[NSData class]]) {
         request.responseString = [[NSString alloc] initWithData:request.responseObject encoding:NSUTF8StringEncoding];
     }
-    request.responseJSONObject = [_jsonResponseSerializer responseObjectForResponse:response data:responseObject error:&error];
+    request.responseJSONObject = [_jsonResponseSerializer responseObjectForResponse:response data:responseObject error:&serializerError];
+    
+    NSError *resultError = nil;
+    BOOL succeed = NO;
+    if (error) {
+        succeed = NO;
+        resultError = error;
+    } else if (serializerError) {
+        succeed = NO;
+        serializerError = resultError;
+    } else {
+        succeed = YES;
+    }
+    
+    if (succeed) {
+        [self requestDidSucceedWithRequest:request];
+    } else {
+        [self requestDidFailedWithRequest:request];
+    }
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self removeRequestAtRecord:request];
+    });
+    
+}
+
+- (void)requestDidSucceedWithRequest:(JABaseRequest *)request {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (request.requestSuccessBlock) {
+            request.requestSuccessBlock(request);
+        }
+    });
+}
+
+- (void)requestDidFailedWithRequest:(JABaseRequest *)request {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (request.requestFailBlock) {
+            request.requestFailBlock(request);
+        }
+    });
 }
 
 - (void)addRequestToRecord:(JABaseRequest *)request {

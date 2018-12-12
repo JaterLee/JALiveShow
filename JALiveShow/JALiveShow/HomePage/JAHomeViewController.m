@@ -8,9 +8,12 @@
 
 #import "JAHomeViewController.h"
 #import "JAGetHotRecAnchorReuqest.h"
+#import <MJExtension/NSObject+MJKeyValue.h>
+#import "JALiveInfoModel.h"
 
 @interface JAHomeViewController ()
 
+@property (nonatomic, strong) UICollectionView *collectionView;
 @end
 
 @implementation JAHomeViewController
@@ -20,7 +23,21 @@
     self.navigationItem.title = @"喵live";
     
     JAGetHotRecAnchorReuqest *request = [JAGetHotRecAnchorReuqest new];
-    [request start];
+    [request startWithCompletionBlockWithSuccess:^(__kindof JABaseRequest * _Nonnull request) {
+        if ([request.responseJSONObject[@"code"] isEqualToString:@"100"]) {
+             NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: request.responseJSONObject[@"data"][@"roomList"]];
+            NSLog(@"%@", liveList);
+            
+            [liveList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                
+            }];
+            
+            
+        }
+        
+    } failure:^(__kindof JABaseRequest * _Nonnull request) {
+        
+    }];
 }
 
 /*

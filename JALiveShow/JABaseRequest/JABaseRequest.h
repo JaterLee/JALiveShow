@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
+@class JABaseRequest;
 
 typedef NS_ENUM(NSInteger, JARequestMethod) {
     JARequestMethodGet = 0,
     JARequestMethodPost
 };
+
+typedef void(^JARequestCompleteBlock)(__kindof JABaseRequest *request);
 
 @interface JABaseRequest : NSObject
 
@@ -22,8 +25,18 @@ typedef NS_ENUM(NSInteger, JARequestMethod) {
 @property (nonatomic, strong, readonly, nullable) id responseJSONObject;
 @property (nonatomic, strong, readonly, nullable) NSString *responseString;
 
+@property (nonatomic, copy, nullable) JARequestCompleteBlock requestSuccessBlock;
+@property (nonatomic, copy, nullable) JARequestCompleteBlock requestFailBlock;
+
 /// 开始请求
 - (void)start;
+
+- (void)stop;
+
+- (void)startWithCompletionBlockWithSuccess:(JARequestCompleteBlock)success
+                                    failure:(JARequestCompleteBlock)failure;
+
+- (void)clearCompletionBlock;
 
 /// http 请求的类型
 - (JARequestMethod)requestMethod;

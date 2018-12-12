@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addRequest:(JABaseRequest *)request;
 
+- (void)cancelRequest:(JABaseRequest *)request;
+
 @end
 
 NS_ASSUME_NONNULL_END
