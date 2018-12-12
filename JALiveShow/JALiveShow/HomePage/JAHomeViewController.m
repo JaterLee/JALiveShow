@@ -27,9 +27,6 @@
         if ([request.responseJSONObject[@"code"] isEqualToString:@"100"]) {
              NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: request.responseJSONObject[@"data"][@"roomList"]];
             NSLog(@"%@", liveList);
-            
-            
-            
             [liveList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
                 
             }];
