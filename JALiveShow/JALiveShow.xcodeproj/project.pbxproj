@@ -17,11 +17,26 @@
 		A92B464C21AC4E1700FEF4BA /* JAThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464B21AC4E1700FEF4BA /* JAThemeManager.m */; };
 		A92B464F21B6C81D00FEF4BA /* JABaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464E21B6C81D00FEF4BA /* JABaseRequest.m */; };
 		A92B465321B6DA5600FEF4BA /* JANetworkAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B465221B6DA5600FEF4BA /* JANetworkAgent.m */; };
+		A95EFD2421C2C7B500938074 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD2321C2C7B500938074 /* VideoToolbox.framework */; };
+		A95EFD2621C2C7BD00938074 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD2521C2C7BD00938074 /* QuartzCore.framework */; };
+		A95EFD2821C2C7C500938074 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD2721C2C7C500938074 /* OpenGLES.framework */; };
+		A95EFD2A21C2C7CD00938074 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD2921C2C7CD00938074 /* MobileCoreServices.framework */; };
+		A95EFD2C21C2C7D500938074 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD2B21C2C7D500938074 /* MediaPlayer.framework */; };
+		A95EFD2E21C2C7DC00938074 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD2D21C2C7DC00938074 /* CoreVideo.framework */; };
+		A95EFD3021C2C7E500938074 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD2F21C2C7E500938074 /* CoreMedia.framework */; };
+		A95EFD3221C2C7EB00938074 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD3121C2C7EB00938074 /* CoreGraphics.framework */; };
+		A95EFD3421C2C7EF00938074 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD3321C2C7EF00938074 /* AVFoundation.framework */; };
+		A95EFD3621C2C7F600938074 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD3521C2C7F600938074 /* AudioToolbox.framework */; };
 		A9BD3B1221BD626000CDC053 /* JAMBaseReuqest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1121BD626000CDC053 /* JAMBaseReuqest.m */; };
 		A9BD3B1521BD627600CDC053 /* JANetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1421BD627600CDC053 /* JANetUtil.m */; };
 		A9BD3B1921BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1821BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m */; };
 		A9BD3B1F21BEC5E000CDC053 /* JABaseRequestPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1E21BEC5E000CDC053 /* JABaseRequestPrivate.m */; };
 		A9BD3B2321C01CBA00CDC053 /* JALiveInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B2221C01CBA00CDC053 /* JALiveInfoModel.m */; };
+		A9BD3B2921C2A59D00CDC053 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BD3B2821C2A59D00CDC053 /* IJKMediaFramework.framework */; };
+		A9BD3B2B21C2A7E500CDC053 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BD3B2A21C2A7E500CDC053 /* libz.tbd */; };
+		A9BD3B2D21C2A83100CDC053 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BD3B2C21C2A83100CDC053 /* libc++abi.tbd */; };
+		A9BD3B2F21C2A96200CDC053 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BD3B2E21C2A96200CDC053 /* libc++.tbd */; };
+		A9BD3B3421C2A9B700CDC053 /* JAHomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B3321C2A9B700CDC053 /* JAHomePageHeaderView.m */; };
 		A9C1E75C219DCC7E000DADEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E74F219DCC7E000DADEC /* Assets.xcassets */; };
 		A9C1E75D219DCC7E000DADEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E753219DCC7E000DADEC /* LaunchScreen.storyboard */; };
 		A9C1E75F219DCC7E000DADEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E757219DCC7E000DADEC /* main.m */; };
@@ -76,6 +91,16 @@
 		A92B464E21B6C81D00FEF4BA /* JABaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JABaseRequest.m; sourceTree = "<group>"; };
 		A92B465121B6DA5600FEF4BA /* JANetworkAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JANetworkAgent.h; sourceTree = "<group>"; };
 		A92B465221B6DA5600FEF4BA /* JANetworkAgent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JANetworkAgent.m; sourceTree = "<group>"; };
+		A95EFD2321C2C7B500938074 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		A95EFD2521C2C7BD00938074 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A95EFD2721C2C7C500938074 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A95EFD2921C2C7CD00938074 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A95EFD2B21C2C7D500938074 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A95EFD2D21C2C7DC00938074 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A95EFD2F21C2C7E500938074 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A95EFD3121C2C7EB00938074 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A95EFD3321C2C7EF00938074 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A95EFD3521C2C7F600938074 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A9BD3B1021BD626000CDC053 /* JAMBaseReuqest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAMBaseReuqest.h; sourceTree = "<group>"; };
 		A9BD3B1121BD626000CDC053 /* JAMBaseReuqest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAMBaseReuqest.m; sourceTree = "<group>"; };
 		A9BD3B1321BD627600CDC053 /* JANetUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JANetUtil.h; sourceTree = "<group>"; };
@@ -86,6 +111,13 @@
 		A9BD3B1E21BEC5E000CDC053 /* JABaseRequestPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JABaseRequestPrivate.m; sourceTree = "<group>"; };
 		A9BD3B2121C01CBA00CDC053 /* JALiveInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JALiveInfoModel.h; sourceTree = "<group>"; };
 		A9BD3B2221C01CBA00CDC053 /* JALiveInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JALiveInfoModel.m; sourceTree = "<group>"; };
+		A9BD3B2821C2A59D00CDC053 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		A9BD3B2A21C2A7E500CDC053 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A9BD3B2C21C2A83100CDC053 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		A9BD3B2E21C2A96200CDC053 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		A9BD3B3221C2A9B700CDC053 /* JAHomePageHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomePageHeaderView.h; sourceTree = "<group>"; };
+		A9BD3B3321C2A9B700CDC053 /* JAHomePageHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomePageHeaderView.m; sourceTree = "<group>"; };
+		A9BD3B3621C2B57800CDC053 /* JALiveShow.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JALiveShow.pch; sourceTree = "<group>"; };
 		A9C1E74F219DCC7E000DADEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9C1E752219DCC7E000DADEC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9C1E754219DCC7E000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +136,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95EFD3621C2C7F600938074 /* AudioToolbox.framework in Frameworks */,
+				A95EFD3421C2C7EF00938074 /* AVFoundation.framework in Frameworks */,
+				A95EFD3221C2C7EB00938074 /* CoreGraphics.framework in Frameworks */,
+				A95EFD3021C2C7E500938074 /* CoreMedia.framework in Frameworks */,
+				A95EFD2E21C2C7DC00938074 /* CoreVideo.framework in Frameworks */,
+				A95EFD2C21C2C7D500938074 /* MediaPlayer.framework in Frameworks */,
+				A95EFD2A21C2C7CD00938074 /* MobileCoreServices.framework in Frameworks */,
+				A95EFD2821C2C7C500938074 /* OpenGLES.framework in Frameworks */,
+				A95EFD2621C2C7BD00938074 /* QuartzCore.framework in Frameworks */,
+				A95EFD2421C2C7B500938074 /* VideoToolbox.framework in Frameworks */,
+				A9BD3B2F21C2A96200CDC053 /* libc++.tbd in Frameworks */,
+				A9BD3B2D21C2A83100CDC053 /* libc++abi.tbd in Frameworks */,
+				A9BD3B2B21C2A7E500CDC053 /* libz.tbd in Frameworks */,
 				C86ACCA57CCB69F2FAFAAF3B /* libPods-JALiveShow.a in Frameworks */,
+				A9BD3B2921C2A59D00CDC053 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +176,19 @@
 		1747DD6E2D524505AD96D59D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A95EFD3521C2C7F600938074 /* AudioToolbox.framework */,
+				A95EFD3321C2C7EF00938074 /* AVFoundation.framework */,
+				A95EFD3121C2C7EB00938074 /* CoreGraphics.framework */,
+				A95EFD2F21C2C7E500938074 /* CoreMedia.framework */,
+				A95EFD2D21C2C7DC00938074 /* CoreVideo.framework */,
+				A95EFD2B21C2C7D500938074 /* MediaPlayer.framework */,
+				A95EFD2921C2C7CD00938074 /* MobileCoreServices.framework */,
+				A95EFD2721C2C7C500938074 /* OpenGLES.framework */,
+				A95EFD2521C2C7BD00938074 /* QuartzCore.framework */,
+				A95EFD2321C2C7B500938074 /* VideoToolbox.framework */,
+				A9BD3B2E21C2A96200CDC053 /* libc++.tbd */,
+				A9BD3B2C21C2A83100CDC053 /* libc++abi.tbd */,
+				A9BD3B2A21C2A7E500CDC053 /* libz.tbd */,
 				01F536AF0A9B8F1A2E79D105 /* libPods-JALiveShow.a */,
 				0F89A5F2510E556DA5AA0332 /* libPods-JALiveShowTests.a */,
 				802656B4FFBD70D36F920ABF /* libPods-JALiveShowUITests.a */,
@@ -163,15 +222,13 @@
 		564917F32199682C00285BCF /* JALiveShow */ = {
 			isa = PBXGroup;
 			children = (
-				A9BD3B0F21BD623E00CDC053 /* Request */,
+				A9BD3B2621C2A54400CDC053 /* Vender */,
 				A9C1E762219DCFBA000DADEC /* Tabbar */,
 				A9C1E75B219DCC7E000DADEC /* HomePage */,
 				A9C1E750219DCC7E000DADEC /* Follow */,
 				A9C1E75A219DCC7E000DADEC /* Export */,
 				A9C1E74D219DCC7E000DADEC /* Mine */,
-				A9C1E74E219DCC7E000DADEC /* Resource */,
 				A9C1E751219DCC7E000DADEC /* Config */,
-				A92B464921AC4DF000FEF4BA /* Tools */,
 			);
 			path = JALiveShow;
 			sourceTree = "<group>";
@@ -258,6 +315,42 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		A9BD3B2621C2A54400CDC053 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				A9BD3B2721C2A58B00CDC053 /* Libs */,
+				A92B464921AC4DF000FEF4BA /* Tools */,
+				A9BD3B0F21BD623E00CDC053 /* Request */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		A9BD3B2721C2A58B00CDC053 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				A9BD3B2821C2A59D00CDC053 /* IJKMediaFramework.framework */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		A9BD3B3021C2A98800CDC053 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A9BD3B3221C2A9B700CDC053 /* JAHomePageHeaderView.h */,
+				A9BD3B3321C2A9B700CDC053 /* JAHomePageHeaderView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A9BD3B3121C2A98F00CDC053 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A92B463D21AC3F3B00FEF4BA /* JAHomeViewController.h */,
+				A92B463E21AC3F3B00FEF4BA /* JAHomeViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		A9C1E74D219DCC7E000DADEC /* Mine */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,14 +358,6 @@
 				A92B464721AC3F6200FEF4BA /* JAMineViewController.m */,
 			);
 			path = Mine;
-			sourceTree = "<group>";
-		};
-		A9C1E74E219DCC7E000DADEC /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				A9C1E74F219DCC7E000DADEC /* Assets.xcassets */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		A9C1E750219DCC7E000DADEC /* Follow */ = {
@@ -287,11 +372,13 @@
 		A9C1E751219DCC7E000DADEC /* Config */ = {
 			isa = PBXGroup;
 			children = (
+				A9C1E74F219DCC7E000DADEC /* Assets.xcassets */,
 				A9C1E752219DCC7E000DADEC /* AppDelegate.h */,
 				A9C1E758219DCC7E000DADEC /* AppDelegate.m */,
 				A9C1E753219DCC7E000DADEC /* LaunchScreen.storyboard */,
 				A9C1E757219DCC7E000DADEC /* main.m */,
 				A9C1E759219DCC7E000DADEC /* Info.plist */,
+				A9BD3B3621C2B57800CDC053 /* JALiveShow.pch */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -308,10 +395,10 @@
 		A9C1E75B219DCC7E000DADEC /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				A9BD3B3121C2A98F00CDC053 /* ViewController */,
+				A9BD3B3021C2A98800CDC053 /* View */,
 				A9BD3B2021C01C8400CDC053 /* Model */,
 				A9BD3B1621BD62D100CDC053 /* Reuqest */,
-				A92B463D21AC3F3B00FEF4BA /* JAHomeViewController.h */,
-				A92B463E21AC3F3B00FEF4BA /* JAHomeViewController.m */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -617,6 +704,7 @@
 				A9BD3B2321C01CBA00CDC053 /* JALiveInfoModel.m in Sources */,
 				A92B464221AC3F4A00FEF4BA /* JAFollowViewController.m in Sources */,
 				A9BD3B1921BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m in Sources */,
+				A9BD3B3421C2A9B700CDC053 /* JAHomePageHeaderView.m in Sources */,
 				A9BD3B1F21BEC5E000CDC053 /* JABaseRequestPrivate.m in Sources */,
 				A9C1E765219DD015000DADEC /* JATabBarViewController.m in Sources */,
 				A9C1E760219DCC7E000DADEC /* AppDelegate.m in Sources */,
@@ -794,11 +882,38 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZEDQTGMZ2Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JALiveShow/Vender/Libs",
+				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JALiveShow/Config/JALiveShow.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/JALiveShow/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MJExtension\"",
+					"-l\"Masonry\"",
+					"-l\"ReactiveObjC\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxf.JALiveShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -817,11 +932,38 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZEDQTGMZ2Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JALiveShow/Vender/Libs",
+				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JALiveShow/Config/JALiveShow.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/JALiveShow/Config/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MJExtension\"",
+					"-l\"Masonry\"",
+					"-l\"ReactiveObjC\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.zxf.JALiveShow;
 				PRODUCT_NAME = "$(TARGET_NAME)";
