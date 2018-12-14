@@ -27,6 +27,7 @@
 		A95EFD3221C2C7EB00938074 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD3121C2C7EB00938074 /* CoreGraphics.framework */; };
 		A95EFD3421C2C7EF00938074 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD3321C2C7EF00938074 /* AVFoundation.framework */; };
 		A95EFD3621C2C7F600938074 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95EFD3521C2C7F600938074 /* AudioToolbox.framework */; };
+		A95EFD3921C3E73900938074 /* JALiveShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = A95EFD3821C3E73900938074 /* JALiveShowView.m */; };
 		A9BD3B1221BD626000CDC053 /* JAMBaseReuqest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1121BD626000CDC053 /* JAMBaseReuqest.m */; };
 		A9BD3B1521BD627600CDC053 /* JANetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1421BD627600CDC053 /* JANetUtil.m */; };
 		A9BD3B1921BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B1821BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m */; };
@@ -42,6 +43,7 @@
 		A9C1E75F219DCC7E000DADEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E757219DCC7E000DADEC /* main.m */; };
 		A9C1E760219DCC7E000DADEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E758219DCC7E000DADEC /* AppDelegate.m */; };
 		A9C1E765219DD015000DADEC /* JATabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E764219DD015000DADEC /* JATabBarViewController.m */; };
+		A9C9962321C4014B00AED664 /* JAHomePageRequestService.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C9962221C4014B00AED664 /* JAHomePageRequestService.m */; };
 		C86ACCA57CCB69F2FAFAAF3B /* libPods-JALiveShow.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F536AF0A9B8F1A2E79D105 /* libPods-JALiveShow.a */; };
 		D3896248BE032C369719AC27 /* libPods-JALiveShowTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F89A5F2510E556DA5AA0332 /* libPods-JALiveShowTests.a */; };
 /* End PBXBuildFile section */
@@ -101,6 +103,8 @@
 		A95EFD3121C2C7EB00938074 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		A95EFD3321C2C7EF00938074 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A95EFD3521C2C7F600938074 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A95EFD3721C3E73900938074 /* JALiveShowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JALiveShowView.h; sourceTree = "<group>"; };
+		A95EFD3821C3E73900938074 /* JALiveShowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JALiveShowView.m; sourceTree = "<group>"; };
 		A9BD3B1021BD626000CDC053 /* JAMBaseReuqest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAMBaseReuqest.h; sourceTree = "<group>"; };
 		A9BD3B1121BD626000CDC053 /* JAMBaseReuqest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAMBaseReuqest.m; sourceTree = "<group>"; };
 		A9BD3B1321BD627600CDC053 /* JANetUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JANetUtil.h; sourceTree = "<group>"; };
@@ -126,6 +130,8 @@
 		A9C1E759219DCC7E000DADEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9C1E763219DD015000DADEC /* JATabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JATabBarViewController.h; sourceTree = "<group>"; };
 		A9C1E764219DD015000DADEC /* JATabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JATabBarViewController.m; sourceTree = "<group>"; };
+		A9C9962121C4014B00AED664 /* JAHomePageRequestService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomePageRequestService.h; sourceTree = "<group>"; };
+		A9C9962221C4014B00AED664 /* JAHomePageRequestService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomePageRequestService.m; sourceTree = "<group>"; };
 		AA53220B0FD2A3B684990471 /* Pods-JALiveShowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShowTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShowTests/Pods-JALiveShowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C955AEC67F5E0C140BBEDB51 /* Pods-JALiveShowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShowTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShowTests/Pods-JALiveShowTests.release.xcconfig"; sourceTree = "<group>"; };
 		FBC984A6D8DB7677BB48936D /* Pods-JALiveShow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShow.release.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShow/Pods-JALiveShow.release.xcconfig"; sourceTree = "<group>"; };
@@ -338,6 +344,8 @@
 			children = (
 				A9BD3B3221C2A9B700CDC053 /* JAHomePageHeaderView.h */,
 				A9BD3B3321C2A9B700CDC053 /* JAHomePageHeaderView.m */,
+				A95EFD3721C3E73900938074 /* JALiveShowView.h */,
+				A95EFD3821C3E73900938074 /* JALiveShowView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 		A9C1E75B219DCC7E000DADEC /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				A9C9962021C4012C00AED664 /* Service */,
 				A9BD3B3121C2A98F00CDC053 /* ViewController */,
 				A9BD3B3021C2A98800CDC053 /* View */,
 				A9BD3B2021C01C8400CDC053 /* Model */,
@@ -410,6 +419,15 @@
 				A9C1E764219DD015000DADEC /* JATabBarViewController.m */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		A9C9962021C4012C00AED664 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A9C9962121C4014B00AED664 /* JAHomePageRequestService.h */,
+				A9C9962221C4014B00AED664 /* JAHomePageRequestService.m */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -703,12 +721,14 @@
 				A92B463F21AC3F3B00FEF4BA /* JAHomeViewController.m in Sources */,
 				A9BD3B2321C01CBA00CDC053 /* JALiveInfoModel.m in Sources */,
 				A92B464221AC3F4A00FEF4BA /* JAFollowViewController.m in Sources */,
+				A95EFD3921C3E73900938074 /* JALiveShowView.m in Sources */,
 				A9BD3B1921BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m in Sources */,
 				A9BD3B3421C2A9B700CDC053 /* JAHomePageHeaderView.m in Sources */,
 				A9BD3B1F21BEC5E000CDC053 /* JABaseRequestPrivate.m in Sources */,
 				A9C1E765219DD015000DADEC /* JATabBarViewController.m in Sources */,
 				A9C1E760219DCC7E000DADEC /* AppDelegate.m in Sources */,
 				A9BD3B1521BD627600CDC053 /* JANetUtil.m in Sources */,
+				A9C9962321C4014B00AED664 /* JAHomePageRequestService.m in Sources */,
 				A9BD3B1221BD626000CDC053 /* JAMBaseReuqest.m in Sources */,
 				A92B464C21AC4E1700FEF4BA /* JAThemeManager.m in Sources */,
 				A9C1E75F219DCC7E000DADEC /* main.m in Sources */,
