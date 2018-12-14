@@ -7,10 +7,11 @@
 //
 
 #import "JAHomeViewController.h"
-#import "JAGetHotRecAnchorReuqest.h"
+#import "JAHomePageHeaderView.h"
+#import "JAHomePageRequestService.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 #import <MJExtension/NSObject+MJKeyValue.h>
 #import "JALiveInfoModel.h"
-#import "JAHomePageHeaderView.h"
 
 @interface JAHomeViewController ()
 
@@ -32,21 +33,21 @@
         make.height.mas_equalTo(385.0f);
     }];
     
-    JAGetHotRecAnchorReuqest *request = [JAGetHotRecAnchorReuqest new];
-    [request startWithCompletionBlockWithSuccess:^(__kindof JABaseRequest * _Nonnull request) {
-        if ([request.responseJSONObject[@"code"] isEqualToString:@"100"]) {
-             NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: request.responseJSONObject[@"data"][@"roomList"]];
-            NSMutableArray *tempArray = [NSMutableArray array];
-            [liveList enumerateObjectsUsingBlock:^(JALiveInfoModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                [tempArray addObject:obj.flv];
-            }];
-            
-            [headerView configHotAnchorList:tempArray];
-        }
-        
-    } failure:^(__kindof JABaseRequest * _Nonnull request) {
+    JAHomePageRequestService *service = [JAHomePageRequestService new];
+    RACCommand *command = [service getHotRecAnchorReuqestCommand];
+    [[command.executionSignals switchToLatest] subscribeNext:^(id  _Nullable x) {
+        NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: x];
+        NSMutableArray *tempArray = [NSMutableArray array];
+        [liveList enumerateObjectsUsingBlock:^(JALiveInfoModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [tempArray addObject:obj.flv];
+        }];
+        [headerView configHotAnchorList:tempArray];
+
+    }];
+    [command.errors subscribeNext:^(id  _Nullable x) {
         
     }];
+    [command execute:@1];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

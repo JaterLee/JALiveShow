@@ -7,10 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+@class RACCommand;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JAHomePageRequestService : NSObject
+
+- (RACCommand *)getHotRecAnchorReuqestCommand;
 
 @end
 
