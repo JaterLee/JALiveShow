@@ -10,6 +10,7 @@
 		5649180E2199683700285BCF /* JALiveShowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5649180D2199683700285BCF /* JALiveShowTests.m */; };
 		564918192199683700285BCF /* JALiveShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 564918182199683700285BCF /* JALiveShowUITests.m */; };
 		9D85563475E40BB4D49B40FF /* libPods-JALiveShowUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802656B4FFBD70D36F920ABF /* libPods-JALiveShowUITests.a */; };
+		A9233DBA21C55B23004F73B6 /* JAHomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9233DB921C55B23004F73B6 /* JAHomePageViewModel.m */; };
 		A92B463F21AC3F3B00FEF4BA /* JAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B463E21AC3F3B00FEF4BA /* JAHomeViewController.m */; };
 		A92B464221AC3F4A00FEF4BA /* JAFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464121AC3F4A00FEF4BA /* JAFollowViewController.m */; };
 		A92B464521AC3F5500FEF4BA /* JAExportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464421AC3F5500FEF4BA /* JAExportViewController.m */; };
@@ -79,6 +80,8 @@
 		5649181A2199683700285BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D41ED1864EFF5ECF8922E4E /* Pods-JALiveShow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JALiveShow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JALiveShow/Pods-JALiveShow.debug.xcconfig"; sourceTree = "<group>"; };
 		802656B4FFBD70D36F920ABF /* libPods-JALiveShowUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JALiveShowUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9233DB821C55B23004F73B6 /* JAHomePageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomePageViewModel.h; sourceTree = "<group>"; };
+		A9233DB921C55B23004F73B6 /* JAHomePageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomePageViewModel.m; sourceTree = "<group>"; };
 		A92B463D21AC3F3B00FEF4BA /* JAHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomeViewController.h; sourceTree = "<group>"; };
 		A92B463E21AC3F3B00FEF4BA /* JAHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomeViewController.m; sourceTree = "<group>"; };
 		A92B464021AC3F4A00FEF4BA /* JAFollowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAFollowViewController.h; sourceTree = "<group>"; };
@@ -270,6 +273,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A9233DB721C55B15004F73B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9233DB821C55B23004F73B6 /* JAHomePageViewModel.h */,
+				A9233DB921C55B23004F73B6 /* JAHomePageViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		A92B464921AC4DF000FEF4BA /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +415,7 @@
 		A9C1E75B219DCC7E000DADEC /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				A9233DB721C55B15004F73B6 /* ViewModel */,
 				A9C9962021C4012C00AED664 /* Service */,
 				A9BD3B3121C2A98F00CDC053 /* ViewController */,
 				A9BD3B3021C2A98800CDC053 /* View */,
@@ -589,9 +602,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JALiveShow/Pods-JALiveShow-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -733,6 +749,7 @@
 				A92B464C21AC4E1700FEF4BA /* JAThemeManager.m in Sources */,
 				A9C1E75F219DCC7E000DADEC /* main.m in Sources */,
 				A92B464521AC3F5500FEF4BA /* JAExportViewController.m in Sources */,
+				A9233DBA21C55B23004F73B6 /* JAHomePageViewModel.m in Sources */,
 				A92B464821AC3F6200FEF4BA /* JAMineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

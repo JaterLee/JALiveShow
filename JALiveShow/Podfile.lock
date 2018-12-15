@@ -16,20 +16,23 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
   - MJExtension (3.0.15.1)
+  - MJRefresh (3.1.15.7)
   - ReactiveObjC (3.1.0)
 
 DEPENDENCIES:
   - AFNetworking
   - Masonry
   - MJExtension
+  - MJRefresh
   - ReactiveObjC
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
 
-PODFILE CHECKSUM: 74e5bdd7f10eeddcc3d11751dda3c22b468e54e5
+PODFILE CHECKSUM: 4e12bc910738f80b7194574b871f9881caebf883
 
 COCOAPODS: 1.4.0
