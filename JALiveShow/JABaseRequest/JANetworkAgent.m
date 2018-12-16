@@ -200,7 +200,7 @@
 - (AFHTTPRequestSerializer *)requestSerializerForRequest:(JABaseRequest *)request {
     AFHTTPRequestSerializer *requestSerializer = nil;
     requestSerializer = [AFHTTPRequestSerializer serializer];
-    requestSerializer.timeoutInterval = 60;
+    requestSerializer.timeoutInterval = 30;
     requestSerializer.allowsCellularAccess = YES;
     return requestSerializer;
 }

@@ -15,12 +15,17 @@
 #import "JAThemeManager.h"
 #import <MJRefresh/UIScrollView+MJRefresh.h>
 #import <MJRefresh/MJRefreshNormalHeader.h>
+#import "JAHomePageCollectionViewCell.h"
 
 @interface JAHomeViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 
-@property (nonatomic, strong)  JAHomePageHeaderView *headerView;
+@property (nonatomic, strong) JAHomePageHeaderView *headerView;
+
+@property (nonatomic, assign)  NSInteger pageNo;
+
+@property (nonatomic, strong)  NSMutableArray *dataSource;
 
 @end
 
@@ -32,27 +37,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupUI];
-    
-    self.headerView = [[JAHomePageHeaderView alloc] initWithFrame:CGRectZero];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
 
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 100;
+     return self.dataSource.count;
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+    JAHomePageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
+    JALiveInfoModel *model = self.dataSource[indexPath.item];
+    [cell configLiveLink:model.flv];
     return cell;
 }
 
 #pragma mark - UICollectionViewDelegate
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(100, 100);
+    CGFloat item_W = (ThemeManager.screenWidth-30)/2;
+    CGFloat scale = item_W/ThemeManager.screenWidth;
+    return CGSizeMake((ThemeManager.screenWidth-30)/2, ThemeManager.screenHeight*scale);
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -74,10 +85,13 @@
 - (void)setupUI {
     self.tabBarController.navigationItem.title = @"喵Live";
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.minimumLineSpacing = 10.0f;
+    flowLayout.minimumInteritemSpacing = 10.0f;
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    self.collectionView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
+    [self.collectionView registerClass:[JAHomePageCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerId"];
     [self.view addSubview:self.collectionView];
     
@@ -90,15 +104,15 @@
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(freashHeader)];
     [self.collectionView.mj_header beginRefreshing];
     [self.collectionView reloadData];
+    
+    self.headerView = [[JAHomePageHeaderView alloc] initWithFrame:CGRectZero];
+    self.dataSource = [NSMutableArray array];
 }
 
 - (void)freashHeader {
     JAHomePageRequestService *service = [JAHomePageRequestService new];
     RACCommand *command = [service getHotRecAnchorReuqestCommand];
     [[command.executionSignals switchToLatest] subscribeNext:^(id  _Nullable x) {
-        if ([self.collectionView.mj_header isRefreshing]) {
-            [self.collectionView.mj_header endRefreshing];
-        }
         NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: x];
         NSMutableArray *tempArray = [NSMutableArray array];
         [liveList enumerateObjectsUsingBlock:^(JALiveInfoModel *obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -107,11 +121,27 @@
         [self.headerView configHotAnchorList:tempArray];
     }];
     [command.errors subscribeNext:^(id  _Nullable x) {
+    }];
+    [command execute:@1];
+    
+    
+    RACCommand *listCommand = [service fetchHomePageLiveListRequestCommand];
+    [[listCommand.executionSignals switchToLatest] subscribeNext:^(id  _Nullable x) {
+        if ([self.collectionView.mj_header isRefreshing]) {
+            [self.collectionView.mj_header endRefreshing];
+        }
+        [self.dataSource removeAllObjects];
+        NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: x];
+        [self.dataSource addObjectsFromArray:liveList];
+        [self.collectionView reloadData];
+
+    }];
+    [listCommand.errors subscribeNext:^(NSError * _Nullable x) {
         if ([self.collectionView.mj_header isRefreshing]) {
             [self.collectionView.mj_header endRefreshing];
         }
     }];
-    [command execute:@1];
+    [listCommand execute:@1];
 
 }
 

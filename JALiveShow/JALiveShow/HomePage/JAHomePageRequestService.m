@@ -9,6 +9,7 @@
 #import "JAHomePageRequestService.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "JAGetHotRecAnchorReuqest.h"
+#import "JAHomeLiveRoomListRequest.h"
 
 @implementation JAHomePageRequestService
 
@@ -24,7 +25,29 @@
                     [subscriber sendError:[NSError errorWithDomain:NSCocoaErrorDomain code:[request.responseJSONObject[@"code"] integerValue] userInfo:@{NSLocalizedDescriptionKey : request.responseJSONObject}]];
                 }
             } failure:^(__kindof JABaseRequest * _Nonnull request) {
-                [subscriber sendError:[NSError errorWithDomain:NSCocoaErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey : request.responseString}]];
+                [subscriber sendError:[NSError errorWithDomain:NSCocoaErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey : @"接口报错了"}]];
+            }];
+            return [RACDisposable disposableWithBlock:^{
+                [request stop];
+            }];
+        }];
+    }];
+}
+
+- (RACCommand *)fetchHomePageLiveListRequestCommand {
+    return [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            JAHomeLiveRoomListRequest *request = [[JAHomeLiveRoomListRequest alloc] init];
+            request.pageNo = [input integerValue];
+            [request startWithCompletionBlockWithSuccess:^(__kindof JABaseRequest * _Nonnull request) {
+                if ([request.responseJSONObject[@"code"] isEqualToString:@"100"]) {
+                    [subscriber sendNext:request.responseJSONObject[@"data"][@"list"]];
+                    [subscriber sendCompleted];
+                } else {
+                    [subscriber sendError:[NSError errorWithDomain:NSCocoaErrorDomain code:[request.responseJSONObject[@"code"] integerValue] userInfo:@{NSLocalizedDescriptionKey : request.responseJSONObject}]];
+                }
+            } failure:^(__kindof JABaseRequest * _Nonnull request) {
+                [subscriber sendError:[NSError errorWithDomain:NSCocoaErrorDomain code:-1 userInfo:@{NSLocalizedDescriptionKey : @"接口报错了"}]];
             }];
             return [RACDisposable disposableWithBlock:^{
                 [request stop];

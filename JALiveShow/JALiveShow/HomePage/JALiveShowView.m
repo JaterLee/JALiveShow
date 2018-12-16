@@ -26,9 +26,9 @@
 }
 
 - (void)configLiveWithURLString:(NSString *)urlString {
-    if (self.player) {
-        [self.player.view removeFromSuperview];
-    }
+//    if (self.player) {
+//        [self.player.view removeFromSuperview];
+//    }
     self.player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:urlString withOptions:[IJKFFOptions optionsByDefault]];
     [self.player setPlaybackVolume:0];
     self.player.shouldAutoplay = YES;
@@ -42,7 +42,14 @@
 }
 
 - (void)play {
+    [self stop];
     [self.player play];
+}
+
+- (void)stop {
+    if ([self.player isPlaying]) {
+        [self.player stop];
+    }
 }
 
 @end

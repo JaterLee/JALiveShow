@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (RACCommand *)getHotRecAnchorReuqestCommand;
 
+- (RACCommand *)fetchHomePageLiveListRequestCommand;
+
 @end
 
 NS_ASSUME_NONNULL_END

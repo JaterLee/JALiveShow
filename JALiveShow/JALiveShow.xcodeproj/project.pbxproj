@@ -11,6 +11,7 @@
 		564918192199683700285BCF /* JALiveShowUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 564918182199683700285BCF /* JALiveShowUITests.m */; };
 		9D85563475E40BB4D49B40FF /* libPods-JALiveShowUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 802656B4FFBD70D36F920ABF /* libPods-JALiveShowUITests.a */; };
 		A9233DBA21C55B23004F73B6 /* JAHomePageViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9233DB921C55B23004F73B6 /* JAHomePageViewModel.m */; };
+		A9233DBD21C68B92004F73B6 /* JAHomeLiveRoomListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A9233DBC21C68B92004F73B6 /* JAHomeLiveRoomListRequest.m */; };
 		A92B463F21AC3F3B00FEF4BA /* JAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B463E21AC3F3B00FEF4BA /* JAHomeViewController.m */; };
 		A92B464221AC3F4A00FEF4BA /* JAFollowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464121AC3F4A00FEF4BA /* JAFollowViewController.m */; };
 		A92B464521AC3F5500FEF4BA /* JAExportViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B464421AC3F5500FEF4BA /* JAExportViewController.m */; };
@@ -39,6 +40,7 @@
 		A9BD3B2D21C2A83100CDC053 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BD3B2C21C2A83100CDC053 /* libc++abi.tbd */; };
 		A9BD3B2F21C2A96200CDC053 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BD3B2E21C2A96200CDC053 /* libc++.tbd */; };
 		A9BD3B3421C2A9B700CDC053 /* JAHomePageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BD3B3321C2A9B700CDC053 /* JAHomePageHeaderView.m */; };
+		A9C1570D21C6A48C009DC7B6 /* JAHomePageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1570C21C6A48C009DC7B6 /* JAHomePageCollectionViewCell.m */; };
 		A9C1E75C219DCC7E000DADEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E74F219DCC7E000DADEC /* Assets.xcassets */; };
 		A9C1E75D219DCC7E000DADEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9C1E753219DCC7E000DADEC /* LaunchScreen.storyboard */; };
 		A9C1E75F219DCC7E000DADEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C1E757219DCC7E000DADEC /* main.m */; };
@@ -82,6 +84,8 @@
 		802656B4FFBD70D36F920ABF /* libPods-JALiveShowUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JALiveShowUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9233DB821C55B23004F73B6 /* JAHomePageViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomePageViewModel.h; sourceTree = "<group>"; };
 		A9233DB921C55B23004F73B6 /* JAHomePageViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomePageViewModel.m; sourceTree = "<group>"; };
+		A9233DBB21C68B92004F73B6 /* JAHomeLiveRoomListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomeLiveRoomListRequest.h; sourceTree = "<group>"; };
+		A9233DBC21C68B92004F73B6 /* JAHomeLiveRoomListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomeLiveRoomListRequest.m; sourceTree = "<group>"; };
 		A92B463D21AC3F3B00FEF4BA /* JAHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomeViewController.h; sourceTree = "<group>"; };
 		A92B463E21AC3F3B00FEF4BA /* JAHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomeViewController.m; sourceTree = "<group>"; };
 		A92B464021AC3F4A00FEF4BA /* JAFollowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAFollowViewController.h; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 		A9BD3B3221C2A9B700CDC053 /* JAHomePageHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomePageHeaderView.h; sourceTree = "<group>"; };
 		A9BD3B3321C2A9B700CDC053 /* JAHomePageHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomePageHeaderView.m; sourceTree = "<group>"; };
 		A9BD3B3621C2B57800CDC053 /* JALiveShow.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JALiveShow.pch; sourceTree = "<group>"; };
+		A9C1570B21C6A48C009DC7B6 /* JAHomePageCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAHomePageCollectionViewCell.h; sourceTree = "<group>"; };
+		A9C1570C21C6A48C009DC7B6 /* JAHomePageCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAHomePageCollectionViewCell.m; sourceTree = "<group>"; };
 		A9C1E74F219DCC7E000DADEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9C1E752219DCC7E000DADEC /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A9C1E754219DCC7E000DADEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -320,6 +326,8 @@
 			children = (
 				A9BD3B1721BD62F700CDC053 /* JAGetHotRecAnchorReuqest.h */,
 				A9BD3B1821BD62F700CDC053 /* JAGetHotRecAnchorReuqest.m */,
+				A9233DBB21C68B92004F73B6 /* JAHomeLiveRoomListRequest.h */,
+				A9233DBC21C68B92004F73B6 /* JAHomeLiveRoomListRequest.m */,
 			);
 			name = Reuqest;
 			sourceTree = "<group>";
@@ -358,6 +366,8 @@
 				A9BD3B3321C2A9B700CDC053 /* JAHomePageHeaderView.m */,
 				A95EFD3721C3E73900938074 /* JALiveShowView.h */,
 				A95EFD3821C3E73900938074 /* JALiveShowView.m */,
+				A9C1570B21C6A48C009DC7B6 /* JAHomePageCollectionViewCell.h */,
+				A9C1570C21C6A48C009DC7B6 /* JAHomePageCollectionViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -732,8 +742,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9233DBD21C68B92004F73B6 /* JAHomeLiveRoomListRequest.m in Sources */,
 				A92B464F21B6C81D00FEF4BA /* JABaseRequest.m in Sources */,
 				A92B465321B6DA5600FEF4BA /* JANetworkAgent.m in Sources */,
+				A9C1570D21C6A48C009DC7B6 /* JAHomePageCollectionViewCell.m in Sources */,
 				A92B463F21AC3F3B00FEF4BA /* JAHomeViewController.m in Sources */,
 				A9BD3B2321C01CBA00CDC053 /* JALiveInfoModel.m in Sources */,
 				A92B464221AC3F4A00FEF4BA /* JAFollowViewController.m in Sources */,
