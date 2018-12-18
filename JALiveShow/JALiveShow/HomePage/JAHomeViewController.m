@@ -15,6 +15,7 @@
 #import "JAThemeManager.h"
 #import <MJRefresh/UIScrollView+MJRefresh.h>
 #import <MJRefresh/MJRefreshNormalHeader.h>
+#import <MJRefresh/MJRefreshAutoNormalFooter.h>
 #import "JAHomePageCollectionViewCell.h"
 
 @interface JAHomeViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
@@ -26,6 +27,10 @@
 @property (nonatomic, assign)  NSInteger pageNo;
 
 @property (nonatomic, strong)  NSMutableArray *dataSource;
+
+@property (nonatomic, strong)  NSMutableArray *liveBlockList;
+
+@property (nonatomic, strong)  JAHomePageRequestService *service;
 
 @end
 
@@ -44,7 +49,6 @@
     self.collectionView.backgroundColor = [UIColor whiteColor];
 }
 
-
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -54,7 +58,9 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     JAHomePageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cellId" forIndexPath:indexPath];
     JALiveInfoModel *model = self.dataSource[indexPath.item];
+    [cell configCoverImageLink:model.bigpic];
     [cell configLiveLink:model.flv];
+    [cell configNickName:model.myname];
     return cell;
 }
 
@@ -62,8 +68,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat item_W = (ThemeManager.screenWidth-30)/2;
-    CGFloat scale = item_W/ThemeManager.screenWidth;
-    return CGSizeMake((ThemeManager.screenWidth-30)/2, ThemeManager.screenHeight*scale);
+    return CGSizeMake(item_W, item_W*2);
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -80,6 +85,58 @@
     return CGSizeMake(ThemeManager.screenWidth, 385.0f);
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    JALiveInfoModel *model = self.dataSource[indexPath.item];
+//    NSLog(@"willDisplayCell %@",model.myname);
+//    JAHomePageCollectionViewCell *homePageCollectionViewCell =(JAHomePageCollectionViewCell *) cell;
+//    [homePageCollectionViewCell play];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
+    JALiveInfoModel *model = self.dataSource[indexPath.item];
+//    NSLog(@"didEndDisplayingCell %@",model.myname);
+//    JAHomePageCollectionViewCell *homePageCollectionViewCell =(JAHomePageCollectionViewCell *) cell;
+//    [homePageCollectionViewCell stop];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat contentOffset_y = scrollView.contentOffset.y;
+    NSLog(@"contentOffset_y %f", contentOffset_y);
+    
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self showLive];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (decelerate) {
+        return;
+    }
+    [self showLive];
+}
+
+- (void)showLive {
+    @synchronized (self.liveBlockList) {
+        [self.liveBlockList removeAllObjects];
+    }
+    [self.collectionView.visibleCells enumerateObjectsUsingBlock:^(__kindof UICollectionViewCell * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        CGRect cellRect = [self.collectionView convertRect:obj.frame toView:self.view];
+        if (CGRectContainsRect(self.collectionView.frame, cellRect)) {
+            [self.liveBlockList addObject:obj];
+        }
+        if (self.liveBlockList.count > 2) {
+            *stop = YES;
+        }
+    }];
+    
+    [self.liveBlockList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        JAHomePageCollectionViewCell *homePageCollectionViewCell =(JAHomePageCollectionViewCell *) obj;
+        [homePageCollectionViewCell play];
+    }];
+}
+
 #pragma mark - Getter and Setter
 
 - (void)setupUI {
@@ -88,7 +145,7 @@
     flowLayout.minimumLineSpacing = 10.0f;
     flowLayout.minimumInteritemSpacing = 10.0f;
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
-    self.collectionView.contentInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 10, 10, 10);
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self.collectionView registerClass:[JAHomePageCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
@@ -101,17 +158,18 @@
     }];
     
     
-    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(freashHeader)];
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(freshHeader)];
+    self.collectionView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(freshFooter)];
     [self.collectionView.mj_header beginRefreshing];
     [self.collectionView reloadData];
     
     self.headerView = [[JAHomePageHeaderView alloc] initWithFrame:CGRectZero];
     self.dataSource = [NSMutableArray array];
+    self.service = [JAHomePageRequestService new];
 }
 
-- (void)freashHeader {
-    JAHomePageRequestService *service = [JAHomePageRequestService new];
-    RACCommand *command = [service getHotRecAnchorReuqestCommand];
+- (void)freshHeader {
+    RACCommand *command = [self.service getHotRecAnchorReuqestCommand];
     [[command.executionSignals switchToLatest] subscribeNext:^(id  _Nullable x) {
         NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: x];
         NSMutableArray *tempArray = [NSMutableArray array];
@@ -125,7 +183,7 @@
     [command execute:@1];
     
     
-    RACCommand *listCommand = [service fetchHomePageLiveListRequestCommand];
+    RACCommand *listCommand = [self.service fetchHomePageLiveListRequestCommand];
     [[listCommand.executionSignals switchToLatest] subscribeNext:^(id  _Nullable x) {
         if ([self.collectionView.mj_header isRefreshing]) {
             [self.collectionView.mj_header endRefreshing];
@@ -134,15 +192,40 @@
         NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: x];
         [self.dataSource addObjectsFromArray:liveList];
         [self.collectionView reloadData];
-
+        self.pageNo++;
     }];
     [listCommand.errors subscribeNext:^(NSError * _Nullable x) {
         if ([self.collectionView.mj_header isRefreshing]) {
             [self.collectionView.mj_header endRefreshing];
         }
     }];
-    [listCommand execute:@1];
+    self.pageNo = 1;
+    [listCommand execute:@(self.pageNo)];
+}
 
+- (void)freshFooter {
+    RACCommand *listCommand = [self.service fetchHomePageLiveListRequestCommand];
+    [[listCommand.executionSignals switchToLatest] subscribeNext:^(id  _Nullable x) {
+        if ([self.collectionView.mj_footer isRefreshing]) {
+            [self.collectionView.mj_footer endRefreshing];
+        }
+        NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: x];
+        [self.dataSource addObjectsFromArray:liveList];
+        [self.collectionView reloadData];
+    }];
+    [listCommand.errors subscribeNext:^(NSError * _Nullable x) {
+        if ([self.collectionView.mj_footer isRefreshing]) {
+            [self.collectionView.mj_footer endRefreshing];
+        }
+    }];
+    [listCommand execute:@(self.pageNo)];
+}
+
+- (NSMutableArray *)liveBlockList {
+    if (!_liveBlockList) {
+        _liveBlockList = [NSMutableArray array];
+    }
+    return _liveBlockList;
 }
 
 @end

@@ -14,6 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)configLiveLink:(NSString *)liveLink;
 
+- (void)configCoverImageLink:(NSString *)coverImageLink;
+
+- (void)configNickName:(NSString *)nickName;
+
+- (void)play;
+
+- (void)pause;
+
 @end
 
 NS_ASSUME_NONNULL_END

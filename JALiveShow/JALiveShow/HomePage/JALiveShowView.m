@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) IJKFFMoviePlayerController *player;
 
+@property (nonatomic, strong) NSString *liveLink;
+
 @end
 
 @implementation JALiveShowView
@@ -26,29 +28,35 @@
 }
 
 - (void)configLiveWithURLString:(NSString *)urlString {
-//    if (self.player) {
-//        [self.player.view removeFromSuperview];
-//    }
-    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:urlString withOptions:[IJKFFOptions optionsByDefault]];
-    [self.player setPlaybackVolume:0];
-    self.player.shouldAutoplay = YES;
-    [self addSubview:self.player.view];
-    
-    [self.player.view mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
-    }];
-    
-    [self.player prepareToPlay];
+    self.liveLink = urlString;
 }
 
 - (void)play {
-    [self stop];
+    if (self.player) {
+        [self.player play];
+        return;
+    }
+    self.player = [[IJKFFMoviePlayerController alloc] initWithContentURLString:self.liveLink withOptions:[IJKFFOptions optionsByDefault]];
+    [IJKFFMoviePlayerController setLogLevel:k_IJK_LOG_SILENT];
+    [self.player setPlaybackVolume:0];
+    self.player.shouldAutoplay = YES;
+    [self addSubview:self.player.view];
+    [self.player.view mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self);
+    }];
+    [self.player prepareToPlay];
     [self.player play];
 }
 
 - (void)stop {
+    [self.player stop];
+    [self.player.view removeFromSuperview];
+    self.player = nil;
+}
+
+- (void)pause {
     if ([self.player isPlaying]) {
-        [self.player stop];
+        [self.player pause];
     }
 }
 
