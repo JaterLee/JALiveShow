@@ -13,17 +13,20 @@
 #import "JAMineViewController.h"
 #import "JAThemeManager.h"
 
-@interface JATabBarViewController ()
+@interface JATabBarViewController ()<UITabBarControllerDelegate>
 
 @end
 
-@implementation JATabBarViewController
+@implementation JATabBarViewController {
+    NSArray *_homePageAniImages;
+}
 
 #pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self configChildrenViewController];
+    self.delegate = self;
 }
 
 - (void)configChildrenViewController {
@@ -49,6 +52,33 @@
     childVC.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     [childVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [JAThemeManager colorWithHexString:@"535353"]} forState:UIControlStateNormal];
     [childVC.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [JAThemeManager colorWithHexString:@"eb5b60"]} forState:UIControlStateSelected];
+}
+
+
+#pragma mark - UITabBarControllerDelegate
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController NS_AVAILABLE_IOS(3_0);{
+    NSInteger index = [tabBarController.childViewControllers indexOfObject:viewController];
+    UIButton *barButton = tabBarController.tabBar.subviews[index+1];
+    UIImageView *barImageView = barButton.subviews.firstObject;
+    
+    barImageView.animationImages = self.homePageAniImages;
+    barImageView.animationDuration = 0.8;
+    barImageView.animationRepeatCount = 1;
+    [barImageView startAnimating];
+    return YES;
+}
+
+- (NSArray *)homePageAniImages {
+    if (_homePageAniImages) {
+        return _homePageAniImages;
+    }
+    NSMutableArray *tempArr = [NSMutableArray array];
+    for (NSInteger i = 2; i < 20; i++) {
+        UIImage *image = [UIImage imageNamed:[NSString stringWithFormat:@"e3L%@", @(i)]];
+        [tempArr addObject:image];
+    }
+    return tempArr.copy;
 }
 
 @end
