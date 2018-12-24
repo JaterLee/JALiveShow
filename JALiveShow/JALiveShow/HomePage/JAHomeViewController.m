@@ -67,8 +67,8 @@
 #pragma mark - UICollectionViewDelegate
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    CGFloat item_W = (ThemeManager.screenWidth-30)/2;
-    return CGSizeMake(item_W, item_W*2);
+    CGFloat item_W = (ThemeManager.screenWidth-15)/2;
+    return CGSizeMake(item_W, item_W);
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -85,25 +85,14 @@
     return CGSizeMake(ThemeManager.screenWidth, 385.0f);
 }
 
-- (void)collectionView:(UICollectionView *)collectionView willDisplayCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    JALiveInfoModel *model = self.dataSource[indexPath.item];
-//    NSLog(@"willDisplayCell %@",model.myname);
-//    JAHomePageCollectionViewCell *homePageCollectionViewCell =(JAHomePageCollectionViewCell *) cell;
-//    [homePageCollectionViewCell play];
-}
-
 - (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(UICollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath {
-    JALiveInfoModel *model = self.dataSource[indexPath.item];
-//    NSLog(@"didEndDisplayingCell %@",model.myname);
-//    JAHomePageCollectionViewCell *homePageCollectionViewCell =(JAHomePageCollectionViewCell *) cell;
-//    [homePageCollectionViewCell stop];
+    JAHomePageCollectionViewCell *curCell = (JAHomePageCollectionViewCell *)cell;
+    [curCell stop];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat contentOffset_y = scrollView.contentOffset.y;
-    NSLog(@"contentOffset_y %f", contentOffset_y);
-    
-    
+//    NSLog(@"contentOffset_y %f", contentOffset_y);
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -117,6 +106,9 @@
     [self showLive];
 }
 
+
+NSInteger preIntemIndex;
+
 - (void)showLive {
     @synchronized (self.liveBlockList) {
         [self.liveBlockList removeAllObjects];
@@ -124,7 +116,18 @@
     [self.collectionView.visibleCells enumerateObjectsUsingBlock:^(__kindof UICollectionViewCell * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         CGRect cellRect = [self.collectionView convertRect:obj.frame toView:self.view];
         if (CGRectContainsRect(self.collectionView.frame, cellRect)) {
-            [self.liveBlockList addObject:obj];
+            NSIndexPath *curIndexPath = [self.collectionView indexPathForCell:obj];
+            if ((curIndexPath.item-1)%4 == 0) {
+                [self.liveBlockList addObject:obj];
+            } else if ((curIndexPath.item-2)%4 == 0) {
+                [self.liveBlockList addObject:obj];
+            }
+        } else {
+            CGFloat curCellMaxY = CGRectGetMaxY(cellRect);
+            if (curCellMaxY < CGRectGetHeight(cellRect)/3*2) {
+                JAHomePageCollectionViewCell *homePageCollectionViewCell = (JAHomePageCollectionViewCell *)obj;
+                [homePageCollectionViewCell stop];
+            }
         }
         if (self.liveBlockList.count > 2) {
             *stop = YES;
@@ -142,10 +145,10 @@
 - (void)setupUI {
     self.tabBarController.navigationItem.title = @"喵Live";
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    flowLayout.minimumLineSpacing = 10.0f;
-    flowLayout.minimumInteritemSpacing = 10.0f;
+    flowLayout.minimumLineSpacing = 5.0f;
+    flowLayout.minimumInteritemSpacing = 5.0f;
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flowLayout];
-    self.collectionView.contentInset = UIEdgeInsetsMake(0, 10, 10, 10);
+    self.collectionView.contentInset = UIEdgeInsetsMake(0, 5, 10, 5);
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     [self.collectionView registerClass:[JAHomePageCollectionViewCell class] forCellWithReuseIdentifier:@"cellId"];
@@ -159,7 +162,7 @@
     
     
     self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(freshHeader)];
-    self.collectionView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(freshFooter)];
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(freshFooter)];
     [self.collectionView.mj_header beginRefreshing];
     [self.collectionView reloadData];
     
@@ -212,6 +215,7 @@
         NSArray *liveList = [JALiveInfoModel mj_objectArrayWithKeyValuesArray: x];
         [self.dataSource addObjectsFromArray:liveList];
         [self.collectionView reloadData];
+        self.pageNo++;
     }];
     [listCommand.errors subscribeNext:^(NSError * _Nullable x) {
         if ([self.collectionView.mj_footer isRefreshing]) {

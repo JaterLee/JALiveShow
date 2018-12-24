@@ -51,6 +51,7 @@
 - (void)stop {
     [self.player stop];
     [self.player.view removeFromSuperview];
+    [self.player shutdown];
     self.player = nil;
 }
 

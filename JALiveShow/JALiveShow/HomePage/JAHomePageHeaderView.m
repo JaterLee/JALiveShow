@@ -42,24 +42,25 @@
     self.rightMoviePlayerView.layer.cornerRadius = 5.0f;
     [self addSubview:self.rightMoviePlayerView];
     
-    CGFloat gap = 40.0f;
+    CGFloat gap = 20.0f;
     CGFloat height = (ThemeManager.screenWidth - 80 -24) * 3/4;
     
     [bgImageView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
+        make.left.top.right.equalTo(self);
+        make.height.mas_equalTo(300.0f);
     }];
     
     [self.leftMoviePlayerView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self).offset(gap);
         make.top.equalTo(self).offset(75.0f);
-        make.right.equalTo(self.mas_centerX).offset(-12.0f);
+        make.right.equalTo(self.mas_centerX).offset(-5.0f);
         make.height.mas_equalTo(height);
     }];
     
     [self.rightMoviePlayerView mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.right.equalTo(self).offset(-gap);
         make.top.bottom.height.equalTo(self.leftMoviePlayerView);
-        make.left.equalTo(self.mas_centerX).offset(12.0f);
+        make.left.equalTo(self.mas_centerX).offset(5.0f);
     }];
 }
 

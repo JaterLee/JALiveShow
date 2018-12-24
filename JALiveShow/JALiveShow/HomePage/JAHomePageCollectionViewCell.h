@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)play;
 
-- (void)pause;
+- (void)stop;
 
 @end
 

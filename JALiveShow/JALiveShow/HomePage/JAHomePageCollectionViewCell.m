@@ -35,7 +35,10 @@
 }
 
 - (void)drawUI {
+    self.clipsToBounds = YES;
+    self.layer.cornerRadius = 5.0f;
     self.coverImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    self.coverImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self addSubview:self.coverImageView];
     
     self.liveShowView = [[JALiveShowView alloc] initWithFrame:CGRectZero];
@@ -80,8 +83,8 @@
     [self.liveShowView play];
 }
 
-- (void)pause {
-    [self.liveShowView pause];
+- (void)stop {
+    [self.liveShowView stop];
 }
 
 @end
