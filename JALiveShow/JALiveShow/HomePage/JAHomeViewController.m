@@ -14,7 +14,7 @@
 #import "JALiveInfoModel.h"
 #import "JAThemeManager.h"
 #import <MJRefresh/UIScrollView+MJRefresh.h>
-#import <MJRefresh/MJRefreshNormalHeader.h>
+#import "JARefreshHeader.h"
 #import <MJRefresh/MJRefreshAutoNormalFooter.h>
 #import "JAHomePageCollectionViewCell.h"
 
@@ -90,6 +90,18 @@
     [curCell stop];
 }
 
+- (void)collectionView:(UICollectionView *)collectionView willDisplaySupplementaryView:(UICollectionReusableView *)view forElementKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
+    if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
+        [self.headerView start];
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingSupplementaryView:(UICollectionReusableView *)view forElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
+    if ([elementKind isEqualToString:UICollectionElementKindSectionHeader]) {
+        [self.headerView stop];
+    }
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     CGFloat contentOffset_y = scrollView.contentOffset.y;
 //    NSLog(@"contentOffset_y %f", contentOffset_y);
@@ -161,7 +173,7 @@ NSInteger preIntemIndex;
     }];
     
     
-    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(freshHeader)];
+    self.collectionView.mj_header = [JARefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(freshHeader)];
     self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(freshFooter)];
     [self.collectionView.mj_header beginRefreshing];
     [self.collectionView reloadData];

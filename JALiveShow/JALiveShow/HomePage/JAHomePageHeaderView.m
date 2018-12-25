@@ -76,5 +76,15 @@
     }
 }
 
+- (void)start {
+    [self.leftMoviePlayerView play];
+    [self.rightMoviePlayerView play];
+}
+
+- (void)stop {
+    [self.leftMoviePlayerView stop];
+    [self.rightMoviePlayerView stop];
+}
+
 
 @end

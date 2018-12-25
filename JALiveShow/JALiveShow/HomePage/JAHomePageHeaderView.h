@@ -10,6 +10,10 @@
 
 @interface JAHomePageHeaderView : UIView
 
+- (void)start;
+
+- (void)stop;
+
 - (void)configHotAnchorList:(NSArray *)list;
 
 @end
